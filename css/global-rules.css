@@ -1,0 +1,79 @@
+/* reset and global rules */
+:root {
+  /* colors */
+  --dark-purple: hsla(260, 62%, 11%, 1);
+  --russian-violet: hsla(259, 61%, 14%, 1);
+  --vivid-violet: hsla(273, 100%, 55%, 1);
+  --sunglow: hsla(43, 100%, 61%, 1);
+  --blue-jeans: #1d90f5;
+  --alt-blue-jeans: #1d90f567;
+  --third-blue-color: #272a37;
+  --main-gray: #555b69;
+  --alt-gray: #555b6967;
+  --main-success-color: #51f89b;
+  --alt-success-color: #35cc78;
+  --main-failed-color: #f96452;
+  --alt-failed-color: #d15041;
+  /* transitions */
+  --main-transition: 0.5s;
+  /* border-radius */
+  --border-radius: 6px;
+  /* blut */
+  --blur: 5px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+button,
+label {
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1150px;
+  }
+}

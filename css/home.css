@@ -1,0 +1,448 @@
+/* global rules */
+.container .usernameText {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 23px;
+  color: var(--dark-purple);
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  font-weight: 400;
+  user-select: none;
+}
+
+.container .formDiv {
+  background-color: var(--dark-purple);
+  padding: 20px 60px;
+  height: 580px;
+  border-radius: var(--border-radius);
+  overflow-y: scroll;
+  box-shadow: 4px 4px 45px 1px rgba(0, 0, 0, 0.49);
+}
+.container .formDiv::-webkit-scrollbar {
+  width: 8px;
+}
+.container .formDiv::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px var(--dark-purple);
+  border-radius: var(--border-radius);
+}
+.container .formDiv::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px var(--blue-jeans);
+  border-radius: var(--border-radius);
+}
+
+.container .main-title {
+  position: relative;
+  font-size: 30px;
+  width: fit-content;
+  margin: auto;
+  margin-top: 5px;
+  margin-bottom: 50px;
+  letter-spacing: 3.2px;
+  color: white;
+  text-transform: uppercase;
+  user-select: none;
+}
+.container .main-title::before,
+.container .main-title::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  width: 0;
+  height: 3px;
+  background-color: var(--blue-jeans);
+  transition: var(--main-transition);
+}
+.container .main-title::before {
+  left: 0;
+}
+.container .main-title::after {
+  right: 0;
+}
+.container .main-title:hover::before,
+.container .main-title:hover::after {
+  width: 60%;
+}
+
+h3.alt-title {
+  color: white;
+  font-style: italic;
+  border-bottom: 2px solid white;
+  width: fit-content;
+}
+
+.container .formDiv label {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  user-select: none;
+}
+.container .formDiv input[type="text"],
+.container .formDiv input[type="number"] {
+  border-bottom: 2px solid var(--blue-jeans);
+  color: var(--blue-jeans);
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  transition: var(--main-transition);
+  width: 200px;
+}
+.container .formDiv input[type="number"] {
+  width: 30px;
+}
+.container .formDiv input[type="number"]::-webkit-inner-spin-button,
+.container .formDiv input[type="number"]::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+.container .formDiv input[type="text"]:is(:hover, :focus),
+.container .formDiv input[type="number"]:is(:hover, :focus) {
+  transform: scale(1.1);
+}
+.container .formDiv span.special {
+  background-color: white;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 5px 15px;
+  border-radius: var(--border-radius);
+  display: block;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+
+.container .formDiv .slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+.container .slider i {
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.container .formDiv .slider i.disabled {
+  pointer-events: none;
+  color: #777;
+}
+
+.container .formDiv .slider button.submit-button {
+  font-size: 25px;
+  color: white;
+  background-color: var(--blue-jeans);
+  padding: 10px 200px;
+  border-radius: var(--border-radius);
+  user-select: none;
+  cursor: pointer;
+}
+.container .formDiv .slider button.submit-button:hover {
+  background-color: #1d90f5e5;
+}
+.container .formDiv .slider button.submit-button.active {
+  display: block;
+}
+.container .formDiv .slider button.submit-button.disabled {
+  background-color: #777;
+  pointer-events: none;
+}
+
+.container .formDiv label.radioFlex {
+  display: flex;
+  gap: 40px;
+}
+
+.container .formDiv label.answer {
+  color: var(--blue-jeans);
+}
+
+.container .formDiv div.form {
+  display: none;
+}
+.container .formDiv div.form.active {
+  display: block;
+}
+
+.container .formDiv label.hidden,
+.container .formDiv input.hidden,
+.container .formDiv .examen-clinique .avAdelpheDiminue.hidden,
+.container .formDiv .examen-clinique .avAtteintDiminue.hidden {
+  display: none;
+}
+
+/* identite */
+.container .formDiv .identiteInput {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* antecedents */
+.container .formDiv label[for="mstOui"].radioFlex {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.container .formDiv label[for="contactOui"].radioFlex {
+  margin-top: 20px;
+}
+.container .formDiv label[for="priseOui"].radioFlex {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container .formDiv label[for="persAutres"] {
+  margin-top: 20px;
+}
+
+.container .formDiv label[for="antUvOui"].radioFlex {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.container .formDiv label[for="famAutres"] {
+  margin-top: 20px;
+}
+
+.container .formDiv label[for="toxOui"].radioFlex {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* clinique */
+.container .formDiv .clinique label[for="larmOui"].radioFlex {
+  margin-top: 30px;
+}
+.container .formDiv .clinique label.radioFlex {
+  margin-bottom: 20px;
+}
+
+.container .formDiv .clinique label[for="allergieOui"].radioFlex {
+  margin-top: 20px;
+}
+
+/* consultation */
+.container .formDiv .consultation label.radioFlex {
+  margin-top: 20px;
+}
+
+/* examen-clinique */
+.container .formDiv .examen-clinique label.radioFlex,
+.container .formDiv .examen-clinique label[for="resteExamen-clinique"] {
+  margin-top: 20px;
+}
+
+.container .formDiv .examen-clinique .avAdelpheDiminue,
+.container .formDiv .examen-clinique .avAtteintDiminue {
+  display: flex;
+  gap: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* investigations */
+.container .formDiv .investigations label.radioFlex {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container .formDiv .investigations span.special {
+  margin-top: 40px;
+}
+
+.container .formDiv .investigations label[for="EOG"] {
+  margin-top: 20px;
+}
+
+/* etiologie */
+.container .formDiv .etiologie label.radioFlex {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container .formDiv .etiologie label[for="indeterminee"] {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.container .formDiv .etiologie label[for="argEtiologie"] {
+  margin-top: 20px;
+}
+
+.container .formDiv .etiologie textarea#argEtiologie {
+  display: block;
+  width: 500px;
+  height: 170px;
+  border-radius: var(--border-radius);
+  margin-top: 10px;
+  outline: none;
+  font-size: 25px;
+  resize: none;
+  border: 2px solid var(--blue-jeans);
+}
+
+/* traitement */
+.container .formDiv .traitement label.radioFlex {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* evolution */
+.container .formDiv .evolution label.radioFlex {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* success page */
+.container .formDiv.success {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .left-text {
+  flex: 4;
+}
+.container .right-text {
+  flex: 3;
+  position: relative;
+}
+.container span.line-breaker {
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  background-color: var(--blue-jeans);
+  left: -5%;
+  top: 0;
+}
+.container .success-message {
+  color: var(--alt-success-color);
+  user-select: none;
+  font-size: 26px;
+  white-space: nowrap;
+}
+.container .txt {
+  color: var(--blue-jeans);
+  line-height: 2.4;
+  font-size: smaller;
+  user-select: none;
+}
+.container .log-out {
+  display: block;
+  align-self: flex-end;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* admin page */
+.container .formDiv.admin {
+  margin-top: 30px;
+}
+.container .admin-form {
+  display: flex;
+  gap: 80px;
+}
+.container .admin-form .admin-label {
+  white-space: nowrap;
+}
+.container .admin-form .admin-select {
+  background-color: var(--vivid-violet);
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 400px;
+  padding: 5px 0;
+  user-select: none;
+}
+.container .admin-form .admin-select option {
+  text-align: center;
+}
+.container .admin-form .admin-submit {
+  color: white;
+  cursor: pointer;
+  background-color: var(--main-failed-color);
+  border-radius: var(--border-radius);
+  transition: var(--main-transition);
+}
+.container .admin-form .admin-submit:hover {
+  background-color: var(--alt-failed-color);
+}
+
+/* submitted div */
+.formDiv.submitted {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.formDiv.submitted .submitted-header {
+  color: white;
+  text-transform: uppercase;
+  user-select: none;
+  font-size: 35px;
+}
+
+/* media queries */
+@media (max-width: 992px) {
+  .container .formDiv {
+    width: 710px;
+  }
+  .container .formDiv .slider button.submit-button {
+    font-size: 23px;
+    padding: 10px 150px;
+  }
+  .container .formDiv label {
+    font-size: 20px;
+  }
+  .container .formDiv label.smaller {
+    font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .container .formDiv {
+    width: 600px;
+  }
+  .container .formDiv .slider button.submit-button {
+    font-size: 21px;
+    padding: 10px 120px;
+  }
+  .container .formDiv label {
+    font-size: 18px;
+  }
+  .container .formDiv label.smaller {
+    font-size: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .container .formDiv {
+    width: 350px;
+  }
+  .container .formDiv .slider button.submit-button {
+    font-size: 18px;
+    padding: 10px 50px;
+  }
+  .container .formDiv label {
+    font-size: 12px;
+  }
+  .container .formDiv input[type="text"],
+  .container .formDiv input[type="number"] {
+    width: 80px;
+    font-size: 12px;
+  }
+  .container .formDiv label.radioFlex {
+    flex-direction: column;
+  }
+  .container .main-title {
+    font-size: 18px;
+    text-align: center;
+  }
+  .container .slider i {
+    font-size: 30px;
+  }
+  .container .formDiv span.special {
+    font-size: 15px;
+  }
+}
+@media (min-width: 1200px) {
+  .container .formDiv {
+    width: 1100px;
+  }
+}
